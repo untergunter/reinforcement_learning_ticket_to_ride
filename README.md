@@ -1,1 +1,3 @@
-# reinforcement_learning_ticket_to_ride
+this is for the course reinforcement learning.
+content:
+ticket to ride game.

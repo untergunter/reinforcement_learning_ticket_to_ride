@@ -1,8 +1,17 @@
 from random import shuffle
 
 class TicketToRideGame:
+
+
+    carriages = {color: 12 for color in ('pink', 'white', 'blue', 'yellow'
+                                         , 'orenge', 'black', 'red', 'green')}
+    carriages['joker'] = 14
+
+    routes ={}
+
     def __init__(self):
-        pass
+        self.carriage_deck = Deck(carriages)
+
 
 class Board:
     def __init__(self):
