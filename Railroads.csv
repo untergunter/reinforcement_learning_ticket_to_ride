@@ -1,0 +1,94 @@
+from,to,length,color
+Vancouver ,Calgary ,3,gray
+Vancouver ,Seattle ,1,gray
+Vancouver ,Seattle ,1,gray
+Seattle ,Portland ,1,gray
+Seattle ,Portland ,1,gray
+Portland ,San Francisco ,5,green
+Portland ,San Francisco ,5,pink
+San Francisco ,salt lake city,5,orange
+San Francisco ,salt lake city,5,white
+San Francisco ,Los Angeles ,3,pink
+San Francisco ,Los Angeles ,3,yellow
+Los Angeles ,Las vegas,2,gray
+Los Angeles ,Phoenix ,3,gray
+Los Angeles ,El Paso,6,black
+Calgary ,Winnipeg ,6,white
+Calgary ,Helena ,4,gray
+salt lake city,Helena ,3,pink
+salt lake city,Las vegas,3,orange
+Helena ,Denver ,4,green
+Denver ,salt lake city,3,red
+Denver ,salt lake city,3,yellow
+Denver ,Phoenix ,5,white
+Denver ,Santa Fe,2,gray
+Santa Fe,Phoenix ,3,gray
+Phoenix ,El Paso,3,gray
+Winnipeg ,Helena ,4,blue
+Helena ,Duluth,6,orange
+Helena ,Omaha,5,red
+El Paso,Oklahima City,5,yellow
+El Paso,Houston,6,green
+El Paso,Dallas,4,red
+Santa Fe,Oklahima City,3,blue
+Santa Fe,Phoenix ,3,gray
+Santa Fe,El Paso,2,gray
+Denver ,Oklahima City,4,red
+Denver ,Kansas city,4,black
+Denver ,Kansas city,4,orange
+Denver ,Omaha,4,pink
+Houston,New Orleans ,2,gray
+Houston,Dallas,1,gray
+Houston,Dallas,1,gray
+Dallas,Oklahima City,2,gray
+Dallas,Oklahima City,2,gray
+Oklahima City,Kansas City ,2,gray
+Oklahima City,Kansas City ,2,gray
+Kansas City ,Omaha,1,gray
+Kansas City ,Omaha,1,gray
+Omaha,Duluth,2,gray
+Omaha,Duluth,2,gray
+Duluth,Winnipeg ,4,black
+Winnipeg ,Sault St. Marie ,6,gray
+New Orleans ,Little Rock,3,green
+Dallas,Little Rock,2,gray
+Little Rock,Oklahima City,2,gray
+Little Rock,Saint Louis,2,gray
+Kansas City ,Saint Louis,2,blue
+Kansas City ,Saint Louis,2,pink
+Saint Louis,Chicago,2,white
+Saint Louis,Chicago,2,green
+Omaha,Chicago,4,blue
+Chicago,Duluth,3,red
+Duluth,Sault St. Marie ,3,gray
+Duluth,Toronto,6,pink
+Sault St. Marie ,Toronto,2,gray
+Toronto,Pittsburgh,2,gray
+Pittsburgh,Saint Louis,5,green
+Saint Louis,Nashville,4,yellow
+Nashville,Little Rock,2,gray
+Nashville,Atlanta,1,gray
+Atlanta,New Orleans ,4,yellow
+Atlanta,New Orleans ,4,orange
+New Orleans ,Miami,6,red
+Atlanta,Miami,5,blue
+Charleston,Miami,4,pink
+Charleston,Atlanta,2,gray
+Charleston,Raleigh,2,gray
+Atlanta,Raleigh,2,gray
+Atlanta,Raleigh,2,gray
+Raleigh,Nashville,3,black
+Raleigh,Washington,2,gray
+Raleigh,Washington,2,gray
+Pittsburgh,Washington,2,gray
+Washington,New York,2,orange
+Washington,New York,2,black
+Pittsburgh,New York,2,white
+Pittsburgh,New York,2,green
+Toronto,Montreal,3,gray
+New York,Montreal,3,blue
+Montreal,Boston,2,gray
+Montreal,Boston,2,gray
+New York,Boston,2,red
+New York,Boston,2,yellow
+Chicago,Toronto,4,white
