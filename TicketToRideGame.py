@@ -1,16 +1,18 @@
 from random import shuffle
+import pandas as pd
+
 
 class TicketToRideGame:
-
-
     carriages = {color: 12 for color in ('pink', 'white', 'blue', 'yellow'
                                          , 'orenge', 'black', 'red', 'green')}
     carriages['joker'] = 14
 
-    routes ={}
+
+    roads = pd.read_csv('Railroads.csv')
+    missions = pd.read_csv('destinations.csv')
 
     def __init__(self):
-        self.carriage_deck = Deck(carriages)
+        self.carriage_deck = Deck(TicketToRideGame.carriages)
 
 
 class Board:
