@@ -1,94 +1,94 @@
-from,to,length,color
-Vancouver ,Calgary ,3,gray
-Vancouver ,Seattle ,1,gray
-Vancouver ,Seattle ,1,gray
-Seattle ,Portland ,1,gray
-Seattle ,Portland ,1,gray
-Portland ,San Francisco ,5,green
-Portland ,San Francisco ,5,pink
-San Francisco ,salt lake city,5,orange
-San Francisco ,salt lake city,5,white
-San Francisco ,Los Angeles ,3,pink
-San Francisco ,Los Angeles ,3,yellow
-Los Angeles ,Las vegas,2,gray
-Los Angeles ,Phoenix ,3,gray
-Los Angeles ,El Paso,6,black
-Calgary ,Winnipeg ,6,white
-Calgary ,Helena ,4,gray
-salt lake city,Helena ,3,pink
-salt lake city,Las vegas,3,orange
-Helena ,Denver ,4,green
-Denver ,salt lake city,3,red
-Denver ,salt lake city,3,yellow
-Denver ,Phoenix ,5,white
-Denver ,Santa Fe,2,gray
-Santa Fe,Phoenix ,3,gray
-Phoenix ,El Paso,3,gray
-Winnipeg ,Helena ,4,blue
-Helena ,Duluth,6,orange
-Helena ,Omaha,5,red
-El Paso,Oklahima City,5,yellow
-El Paso,Houston,6,green
-El Paso,Dallas,4,red
-Santa Fe,Oklahima City,3,blue
-Santa Fe,Phoenix ,3,gray
-Santa Fe,El Paso,2,gray
-Denver ,Oklahima City,4,red
-Denver ,Kansas city,4,black
-Denver ,Kansas city,4,orange
-Denver ,Omaha,4,pink
-Houston,New Orleans ,2,gray
-Houston,Dallas,1,gray
-Houston,Dallas,1,gray
-Dallas,Oklahima City,2,gray
-Dallas,Oklahima City,2,gray
-Oklahima City,Kansas City ,2,gray
-Oklahima City,Kansas City ,2,gray
-Kansas City ,Omaha,1,gray
-Kansas City ,Omaha,1,gray
-Omaha,Duluth,2,gray
-Omaha,Duluth,2,gray
-Duluth,Winnipeg ,4,black
-Winnipeg ,Sault St. Marie ,6,gray
-New Orleans ,Little Rock,3,green
-Dallas,Little Rock,2,gray
-Little Rock,Oklahima City,2,gray
-Little Rock,Saint Louis,2,gray
-Kansas City ,Saint Louis,2,blue
-Kansas City ,Saint Louis,2,pink
-Saint Louis,Chicago,2,white
-Saint Louis,Chicago,2,green
-Omaha,Chicago,4,blue
-Chicago,Duluth,3,red
-Duluth,Sault St. Marie ,3,gray
-Duluth,Toronto,6,pink
-Sault St. Marie ,Toronto,2,gray
-Toronto,Pittsburgh,2,gray
-Pittsburgh,Saint Louis,5,green
-Saint Louis,Nashville,4,yellow
-Nashville,Little Rock,2,gray
-Nashville,Atlanta,1,gray
-Atlanta,New Orleans ,4,yellow
-Atlanta,New Orleans ,4,orange
-New Orleans ,Miami,6,red
-Atlanta,Miami,5,blue
-Charleston,Miami,4,pink
-Charleston,Atlanta,2,gray
-Charleston,Raleigh,2,gray
-Atlanta,Raleigh,2,gray
-Atlanta,Raleigh,2,gray
-Raleigh,Nashville,3,black
-Raleigh,Washington,2,gray
-Raleigh,Washington,2,gray
-Pittsburgh,Washington,2,gray
-Washington,New York,2,orange
-Washington,New York,2,black
-Pittsburgh,New York,2,white
-Pittsburgh,New York,2,green
-Toronto,Montreal,3,gray
-New York,Montreal,3,blue
-Montreal,Boston,2,gray
-Montreal,Boston,2,gray
-New York,Boston,2,red
-New York,Boston,2,yellow
-Chicago,Toronto,4,white
+,from,to,length,color
+0,Vancouver,Calgary,3,gray
+1,Vancouver,Seattle,1,gray
+2,Vancouver,Seattle,1,gray
+3,Seattle,Portland,1,gray
+4,Seattle,Portland,1,gray
+5,Portland,San Francisco,5,green
+6,Portland,San Francisco,5,pink
+7,San Francisco,Salt Lake City,5,orange
+8,San Francisco,Salt Lake City,5,white
+9,San Francisco,Los Angeles,3,pink
+10,San Francisco,Los Angeles,3,yellow
+11,Los Angeles,Las Vegas,2,gray
+12,Los Angeles,Phoenix,3,gray
+13,Los Angeles,El Paso,6,black
+14,Calgary,Winnipeg,6,white
+15,Calgary,Helena,4,gray
+16,Salt Lake City,Helena,3,pink
+17,Salt Lake City,Las Vegas,3,orange
+18,Helena,Denver,4,green
+19,Denver,Salt Lake City,3,red
+20,Denver,Salt Lake City,3,yellow
+21,Denver,Phoenix,5,white
+22,Denver,Santa Fe,2,gray
+23,Santa Fe,Phoenix,3,gray
+24,Phoenix,El Paso,3,gray
+25,Winnipeg,Helena,4,blue
+26,Helena,Duluth,6,orange
+27,Helena,Omaha,5,red
+28,El Paso,Oklahoma City,5,yellow
+29,El Paso,Houston,6,green
+30,El Paso,Dallas,4,red
+31,Santa Fe,Oklahoma City,3,blue
+32,Santa Fe,Phoenix,3,gray
+33,Santa Fe,El Paso,2,gray
+34,Denver,Oklahoma City,4,red
+35,Denver,Kansas City,4,black
+36,Denver,Kansas City,4,orange
+37,Denver,Omaha,4,pink
+38,Houston,New Orleans,2,gray
+39,Houston,Dallas,1,gray
+40,Houston,Dallas,1,gray
+41,Dallas,Oklahoma City,2,gray
+42,Dallas,Oklahoma City,2,gray
+43,Oklahoma City,Kansas City,2,gray
+44,Oklahoma City,Kansas City,2,gray
+45,Kansas City,Omaha,1,gray
+46,Kansas City,Omaha,1,gray
+47,Omaha,Duluth,2,gray
+48,Omaha,Duluth,2,gray
+49,Duluth,Winnipeg,4,black
+50,Winnipeg,Sault St. Marie,6,gray
+51,New Orleans,Little Rock,3,green
+52,Dallas,Little Rock,2,gray
+53,Little Rock,Oklahoma City,2,gray
+54,Little Rock,Saint Louis,2,gray
+55,Kansas City,Saint Louis,2,blue
+56,Kansas City,Saint Louis,2,pink
+57,Saint Louis,Chicago,2,white
+58,Saint Louis,Chicago,2,green
+59,Omaha,Chicago,4,blue
+60,Chicago,Duluth,3,red
+61,Duluth,Sault St. Marie,3,gray
+62,Duluth,Toronto,6,pink
+63,Sault St. Marie,Toronto,2,gray
+64,Toronto,Pittsburgh,2,gray
+65,Pittsburgh,Saint Louis,5,green
+66,Saint Louis,Nashville,4,yellow
+67,Nashville,Little Rock,2,gray
+68,Nashville,Atlanta,1,gray
+69,Atlanta,New Orleans,4,yellow
+70,Atlanta,New Orleans,4,orange
+71,New Orleans,Miami,6,red
+72,Atlanta,Miami,5,blue
+73,Charleston,Miami,4,pink
+74,Charleston,Atlanta,2,gray
+75,Charleston,Raleigh,2,gray
+76,Atlanta,Raleigh,2,gray
+77,Atlanta,Raleigh,2,gray
+78,Raleigh,Nashville,3,black
+79,Raleigh,Washington,2,gray
+80,Raleigh,Washington,2,gray
+81,Pittsburgh,Washington,2,gray
+82,Washington,New York,2,orange
+83,Washington,New York,2,black
+84,Pittsburgh,New York,2,white
+85,Pittsburgh,New York,2,green
+86,Toronto,Montreal,3,gray
+87,New York,Montreal,3,blue
+88,Montreal,Boston,2,gray
+89,Montreal,Boston,2,gray
+90,New York,Boston,2,red
+91,New York,Boston,2,yellow
+92,Chicago,Toronto,4,white
