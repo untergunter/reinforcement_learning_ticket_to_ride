@@ -1,10 +1,8 @@
 from random import shuffle
 import pandas as pd
-
+from collections import namedtuple
 
 class TicketToRideGame:
-    roads = pd.read_csv('Railroads.csv')
-
 
     def __init__(self):
         self.carriages_deck = self.create_carriages_deck()
@@ -27,7 +25,14 @@ class TicketToRideGame:
 
 class Board:
     def __init__(self):
-        pass
+        self.roads = self.setup_roads()
+
+
+    def setup_roads(self):
+        roads = pd.read_csv('Railroads.csv')
+        for _, row in roads.iterrows()
+            route_name = (min(row[0],row[1]),max(row[0],row[1]))
+
 
 class Deck:
     """
@@ -35,12 +40,15 @@ class Deck:
     """
     def __init__(self,type_quantity:dict):
         self.type_quantity = type_quantity
-        self.current_deck = self.reset_deck()
         self.next_deck = []
+        self.current_deck = []
+        self.reset_deck()
+
 
     def reset_deck(self):
         """
         restarts a deck based on the initial type_quantity dictionary
+        or what remains from returned cards
         creates a deck, shuffles it, returns it
         :return: None
         """
@@ -50,12 +58,13 @@ class Deck:
             self.next_deck = []
 
         else:
-            self.current_deck = []
+            current_deck = []
             for card,number_of in self.type_quantity.items():
                 for _ in range(number_of):
-                    self.current_deck.append(card)
+                    current_deck.append(card)
 
-            shuffle(self.current_deck)
+            shuffle(current_deck)
+            self.current_deck = current_deck
 
     def pop_n(self,n:int):
         """
@@ -73,8 +82,14 @@ class Deck:
         return result
 
     def add_cards_underneath(self,cards_back_to_deck):
+        """
+        returns the cards to the next deck
+        :param cards_back_to_deck:
+        :return:
+        """
+
         for card in cards_back_to_deck:
-            self.current_deck.insert(0,card)
+            self.next_deck.append(card)
 
 class Player:
     def __init__(self):
