@@ -3,16 +3,26 @@ import pandas as pd
 
 
 class TicketToRideGame:
-    carriages = {color: 12 for color in ('pink', 'white', 'blue', 'yellow'
-                                         , 'orenge', 'black', 'red', 'green')}
-    carriages['joker'] = 14
-
-
     roads = pd.read_csv('Railroads.csv')
-    missions = pd.read_csv('destinations.csv')
+
 
     def __init__(self):
-        self.carriage_deck = Deck(TicketToRideGame.carriages)
+        self.carriages_deck = self.create_carriages_deck()
+        self.missions_deck = self.create_missions_deck()
+
+    def create_carriages_deck(self):
+        carriages = {color: 12 for color in ('pink', 'white', 'blue', 'yellow'
+                                             , 'orenge', 'black', 'red', 'green')}
+        carriages['joker'] = 14
+        carriages_deck = Deck(carriages)
+        return carriages_deck
+
+    def create_missions_deck(self):
+        missions = pd.read_csv('destinations.csv')
+        tuple_per_mission = missions.to_records(index=False)
+        tuple_dict_count_for_Deck = {mission:1 for mission in tuple_per_mission}
+        missions_deck = Deck(tuple_dict_count_for_Deck)
+        return missions_deck
 
 
 class Board:
