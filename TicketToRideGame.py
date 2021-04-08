@@ -16,7 +16,7 @@ class TicketToRideGame:
         return carriages_deck
 
     def create_missions_deck(self):
-        missions = pd.read_csv('destinations.csv')
+        missions = pd.read_csv(r'data/destinations.csv')
         tuple_per_mission = missions.to_records(index=False)
         tuple_dict_count_for_Deck = {mission:1 for mission in tuple_per_mission}
         missions_deck = Deck(tuple_dict_count_for_Deck)
@@ -29,8 +29,8 @@ class Board:
 
 
     def setup_roads(self):
-        roads = pd.read_csv('Railroads.csv')
-        for _, row in roads.iterrows()
+        roads = pd.read_csv(r'data/Railroads.csv')
+        for _, row in roads.iterrows():
             route_name = (min(row[0],row[1]),max(row[0],row[1]))
 
 

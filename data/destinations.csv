@@ -1,0 +1,31 @@
+from,to,points
+Boston,Miami,12
+Calgary,Phoenix,13
+Calgary,Salt Lake City,7
+Chicago,New Orleans,7
+Chicago,Santa Fe,9
+Dallas,New York,11
+Denver,El Paso,4
+Denver,Pittsburgh,11
+Duluth,El Paso,10
+Duluth,Houston,8
+Helena,Los Angeles,8
+Houston,Kansas City,5
+Chicago,Los Angeles,16
+Los Angeles,Miami,20
+Los Angeles,New York,21
+Atlanta,Montreal,9
+Montreal,New Orleans,13
+Atlanta,New York,6
+Nashville,Portland,17
+Phoenix,Portland,11
+Atlanta,San Francisco,17
+Nashville,Sault St. Marie,8
+Oklahoma City,Sault St. Marie,9
+Los Angeles,Seattle,9
+New York,Seattle,22
+Miami,Toronto,10
+Montreal,Vancouver,20
+Santa Fe,Vancouver,13
+Houston,Winnipeg,12
+Little Rock,Winnipeg,11
