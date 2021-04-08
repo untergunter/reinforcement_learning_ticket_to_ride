@@ -36,6 +36,7 @@ class Deck:
     def __init__(self,type_quantity:dict):
         self.type_quantity = type_quantity
         self.current_deck = self.reset_deck()
+        self.next_deck = []
 
     def reset_deck(self):
         """
@@ -44,15 +45,17 @@ class Deck:
         :return: None
         """
 
+        if len(self.next_deck)!=0:
+            self.current_deck = self.next_deck.copy()
+            self.next_deck = []
 
-        dec = []
-        for card,number_of in self.type_quantity.items():
-            for _ in range(number_of):
-                dec.append(card)
+        else:
+            self.current_deck = []
+            for card,number_of in self.type_quantity.items():
+                for _ in range(number_of):
+                    self.current_deck.append(card)
 
-        shuffle(dec)
-
-        return dec
+            shuffle(self.current_deck)
 
     def pop_n(self,n:int):
         """
@@ -65,7 +68,7 @@ class Deck:
         result=[]
         for _ in range(n):
             if len(self.current_deck)==0:
-                self.current_deck = self.reset_deck()
+                self.reset_deck()
             result.append(self.current_deck.pop())
         return result
 
