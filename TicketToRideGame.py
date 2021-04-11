@@ -1,6 +1,8 @@
 from random import shuffle
+
+import numpy as np
 import pandas as pd
-from collections import namedtuple
+from collections import defaultdict
 
 class TicketToRideGame:
 
@@ -25,14 +27,17 @@ class TicketToRideGame:
 
 class Board:
     def __init__(self):
-        self.roads = self.setup_roads()
+        self.road_id_by_name,self.road_owner = self.setup_roads()
 
 
     def setup_roads(self):
         roads = pd.read_csv(r'data/Railroads.csv')
-        for _, row in roads.iterrows():
-            route_name = (min(row[0],row[1]),max(row[0],row[1]))
-
+        path_id_by_city_names = defaultdict(list)
+        path_occupied_id = [None for player_id in range(len(roads))]
+        for route_id, row in roads.iterrows():
+            route_name = (row[0],row[1])
+            path_id_by_city_names[route_name].append()
+        return path_id_by_city_names,path_occupied_id
 
 class Deck:
     """
