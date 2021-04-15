@@ -12,8 +12,9 @@ class TicketToRideGame:
         self.missions_deck = self.create_missions_deck()
 
     def create_carriages_deck(self):
-        carriages = {color: 12 for color in ('pink', 'white', 'blue', 'yellow'
-                                             , 'orenge', 'black', 'red', 'green')}
+        colors = ('pink', 'white', 'blue', 'yellow'
+                  ,'orange', 'black', 'red', 'green')
+        carriages = {color: 12 for color in colors}
         carriages['joker'] = 14
         carriages_deck = Deck(carriages)
         return carriages_deck
@@ -21,7 +22,10 @@ class TicketToRideGame:
     def create_missions_deck(self):
         missions = pd.read_csv(r'data/destinations.csv')
         tuple_per_mission = missions.to_records(index=False)
-        tuple_dict_count_for_Deck = {mission: 1 for mission in tuple_per_mission}
+        tuple_dict_count_for_Deck = {   (str(mission[0])
+                                        ,str(mission[1])
+                                        ,int(mission[2]))   : 1
+                                     for mission in tuple_per_mission}
         missions_deck = Deck(tuple_dict_count_for_Deck)
         return missions_deck
 
@@ -83,9 +87,10 @@ class Board:
         length, route_color = self.road_data_by_id[road_id]
         if route_color == 'gray':
             all_options = self.calculate_all_valid_ways_to_get_grey_road\
-                (self, cards, length)
+                (cards, length)
+            if all_options is not None:
+                all_options = list(all_options)
             return all_options
-
         elif route_color != 'gray':
             cards_for_route = \
                 self.cards_specific_color(route_color, length, cards)
@@ -104,7 +109,19 @@ class Board:
 
     def can_a_path_be_occupied(self, cards: dict, road_id: int):
         road_is_not_occupied = self.road_owner[road_id] is None
+        if road_is_not_occupied is False:
+            return False
+        purchasing_combinations = self.cards_can_purchase_road(cards,road_id)
+        if purchasing_combinations is None:
+            return False
+        elif purchasing_combinations is not None:
+            return road_is_not_occupied
 
+    def occupy_path(self,road_id,player_id):
+        if self.road_owner[road_id] is not None:
+            raise ValueError(f'road id {road_id} is already '
+                             f'occupied by {self.road_owner[road_id]}')
+        self.road_owner[road_id] = player_id
 
 class Deck:
     """

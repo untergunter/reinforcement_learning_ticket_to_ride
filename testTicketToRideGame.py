@@ -1,6 +1,8 @@
 import pytest
+import pandas as pd
 from collections import defaultdict,Counter
-from TicketToRideGame import Deck, Board
+
+from TicketToRideGame import Deck, Board ,TicketToRideGame
 
 
 deck_input = {'a':1,'b':2,'c':3}
@@ -75,6 +77,50 @@ def test_generate_valid_cards_count_for_path(board):
 
     only_jokers = board.generate_valid_cards_count_for_path(6 , 'yellow' , 0 , 6)
     assert only_jokers == ('joker', 6)
+
+def test_cards_can_purchase_road(board):
+    cards = {'yellow':8}
+    single_color_can = board.cards_can_purchase_road(cards,1)
+    assert single_color_can == [('yellow',6)]
+    gray_single_color = board.cards_can_purchase_road(cards,0)
+    assert gray_single_color == [('yellow',4)]
+    cards = {'yellow': 4,'red':5,'blue':3}
+    gray_multi_color = board.cards_can_purchase_road(cards, 0)
+    assert sorted(gray_multi_color) == [('red',4),('yellow',4)]
+
+def test_occupy_path(board):
+    assert board.road_owner[0] is None
+    board.occupy_path(0,0)
+    assert board.road_owner[0] == 0
+
+def test_can_a_path_be_occupied(board):
+    cards = {'green': 4}
+    assert board.can_a_path_be_occupied(cards,0) is True
+    cards = {'blue': 3,'joker':1}
+    assert board.can_a_path_be_occupied(cards, 0) is True
+    cards = {'green': 3}
+    assert board.can_a_path_be_occupied(cards, 0) is False
+    board.occupy_path(0,0)
+    cards = {'green': 4}
+    assert board.can_a_path_be_occupied(cards,0) is False
+
+@pytest.fixture
+def game():
+    return TicketToRideGame()
+
+def test_carriages_deck(game):
+    cards_count = dict(Counter(game.carriages_deck.current_deck))
+    for color in cards_count:
+        if color != 'joker':
+            assert cards_count[color] == 12
+        elif color == 'joker':
+            assert cards_count[color] == 14
+
+def test_create_missions_deck(game):
+    missions = game.missions_deck.current_deck
+    raw_missions = pd.read_csv(r'data/destinations.csv')
+    assert len(missions)==len(raw_missions)
+
 
 if __name__ == '__main__':
     pytest.main()
